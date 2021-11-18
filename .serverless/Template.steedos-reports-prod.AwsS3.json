@@ -1,0 +1,6 @@
+{
+  "name": "steedos-builder-prod",
+  "region": "ap-east-1",
+  "accelerated": false,
+  "url": "https://steedos-builder-prod.s3.amazonaws.com"
+}

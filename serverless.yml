@@ -20,27 +20,27 @@ steedos-reports-prod:
     cloudfront:
       defaults:
         viewerProtocolPolicy: 'allow-all' # optional
-      origins:
-        - url: http://steedos-builder-prod.s3.ap-east-1.amazonaws.com
-          pathPatterns:
-            static/*:
-              viewerProtocolPolicy: 'allow-all'
-              minTTL: 0
-              defaultTTL: 86400
-              maxTTL: 31536000
-              forward: 
-                headers: none
-                cookies: none
-                queryString: false
-            _next/static/*:
-              viewerProtocolPolicy: 'allow-all' # optional
-              minTTL: 0
-              defaultTTL: 86400
-              maxTTL: 31536000
-              forward: 
-                headers: none
-                cookies: none
-                queryString: false
+      # origins:
+      #   - url: http://steedos-builder-prod.s3.ap-east-1.amazonaws.com
+      #     pathPatterns:
+      #       'static/*':
+      #         viewerProtocolPolicy: 'allow-all'
+      #         minTTL: 0
+      #         defaultTTL: 86400
+      #         maxTTL: 31536000
+      #         forward: 
+      #           headers: none
+      #           cookies: none
+      #           queryString: false
+      #       '_next/static/*':
+      #         viewerProtocolPolicy: 'allow-all' # optional
+      #         minTTL: 0
+      #         defaultTTL: 86400
+      #         maxTTL: 31536000
+      #         forward: 
+      #           headers: none
+      #           cookies: none
+      #           queryString: false
     build:
       env:
         NEXT_PUBLIC_DEPLOYMENT_URL=https://builder.steedos.com

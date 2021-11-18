@@ -1,0 +1,14 @@
+{
+  "region": "us-east-1",
+  "privateZone": false,
+  "domain": "steedos.com",
+  "subdomains": [
+    {
+      "domain": "builder.steedos.com",
+      "distributionId": "E2XW6YQALJ3BKI",
+      "url": "https://d31sxws8ojv2fz.cloudfront.net",
+      "type": "awsCloudFront"
+    }
+  ],
+  "domainMinimumProtocolVersion": "TLSv1.2_2018"
+}
