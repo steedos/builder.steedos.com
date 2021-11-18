@@ -5,6 +5,10 @@
   "region": "us-east-1",
   "enabled": true,
   "comment": "",
+  "aliases": [
+    "builder.steedos.cn",
+    "builder.steedos.com"
+  ],
   "priceClass": "PriceClass_All",
   "origins": [
     {
@@ -53,7 +57,7 @@
             "queryString": true
           },
           "lambda@edge": {
-            "origin-request": "arn:aws:lambda:us-east-1:382025409778:function:steedos-builder-prod-ApiLambda:2"
+            "origin-request": "arn:aws:lambda:us-east-1:382025409778:function:steedos-builder-prod-ApiLambda:4"
           }
         },
         "_next/data/*": {
@@ -73,8 +77,35 @@
             "queryString": true
           },
           "lambda@edge": {
-            "origin-request": "arn:aws:lambda:us-east-1:382025409778:function:steedos-builder-prod-DefaultLambda:2",
-            "origin-response": "arn:aws:lambda:us-east-1:382025409778:function:steedos-builder-prod-DefaultLambda:2"
+            "origin-request": "arn:aws:lambda:us-east-1:382025409778:function:steedos-builder-prod-DefaultLambda:4",
+            "origin-response": "arn:aws:lambda:us-east-1:382025409778:function:steedos-builder-prod-DefaultLambda:4"
+          }
+        }
+      }
+    },
+    {
+      "url": "http://steedos-builder-prod.s3.ap-east-1.amazonaws.com",
+      "pathPatterns": {
+        "static/*": {
+          "viewerProtocolPolicy": "allow-all",
+          "minTTL": 0,
+          "defaultTTL": 86400,
+          "maxTTL": 31536000,
+          "forward": {
+            "headers": "none",
+            "cookies": "none",
+            "queryString": false
+          }
+        },
+        "_next/static/*": {
+          "viewerProtocolPolicy": "allow-all",
+          "minTTL": 0,
+          "defaultTTL": 86400,
+          "maxTTL": 31536000,
+          "forward": {
+            "headers": "none",
+            "cookies": "none",
+            "queryString": false
           }
         }
       }
@@ -104,8 +135,8 @@
       "PATCH"
     ],
     "lambda@edge": {
-      "origin-request": "arn:aws:lambda:us-east-1:382025409778:function:steedos-builder-prod-DefaultLambda:2",
-      "origin-response": "arn:aws:lambda:us-east-1:382025409778:function:steedos-builder-prod-DefaultLambda:2"
+      "origin-request": "arn:aws:lambda:us-east-1:382025409778:function:steedos-builder-prod-DefaultLambda:4",
+      "origin-response": "arn:aws:lambda:us-east-1:382025409778:function:steedos-builder-prod-DefaultLambda:4"
     },
     "compress": true
   }

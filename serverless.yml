@@ -3,7 +3,6 @@ steedos_api_key: ${env.STEEDOS_SERVER_API_KEY}
 steedos-reports-prod:
   component: "@sls-next/serverless-component@v3.6.1-alpha.2" # it is recommended you pin the latest stable version of serverless-next.js
   inputs:
-    domain: ["builder", "steedos.com"]
     name:
       defaultLambda: steedos-builder-prod-DefaultLambda
       apiLambda: steedos-builder-prod-ApiLambda
@@ -18,29 +17,30 @@ steedos-reports-prod:
     timeout: 30
     enableS3Acceleration: false
     cloudfront:
+      aliases: ["builder.steedos.cn", "builder.steedos.com"]
       defaults:
         viewerProtocolPolicy: 'allow-all' # optional
-      # origins:
-      #   - url: http://steedos-builder-prod.s3.ap-east-1.amazonaws.com
-      #     pathPatterns:
-      #       'static/*':
-      #         viewerProtocolPolicy: 'allow-all'
-      #         minTTL: 0
-      #         defaultTTL: 86400
-      #         maxTTL: 31536000
-      #         forward: 
-      #           headers: none
-      #           cookies: none
-      #           queryString: false
-      #       '_next/static/*':
-      #         viewerProtocolPolicy: 'allow-all' # optional
-      #         minTTL: 0
-      #         defaultTTL: 86400
-      #         maxTTL: 31536000
-      #         forward: 
-      #           headers: none
-      #           cookies: none
-      #           queryString: false
+      origins:
+        - url: http://steedos-builder-prod.s3.ap-east-1.amazonaws.com
+          pathPatterns:
+            'static/*':
+              viewerProtocolPolicy: 'allow-all'
+              minTTL: 0
+              defaultTTL: 86400
+              maxTTL: 31536000
+              forward: 
+                headers: none
+                cookies: none
+                queryString: false
+            '_next/static/*':
+              viewerProtocolPolicy: 'allow-all' # optional
+              minTTL: 0
+              defaultTTL: 86400
+              maxTTL: 31536000
+              forward: 
+                headers: none
+                cookies: none
+                queryString: false
     build:
       env:
         NEXT_PUBLIC_DEPLOYMENT_URL=https://builder.steedos.com

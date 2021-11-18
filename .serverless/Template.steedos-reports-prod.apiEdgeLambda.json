@@ -1,6 +1,6 @@
 {
   "name": "steedos-builder-prod-ApiLambda",
-  "hash": "m6t2fiFF++38qqJnpPV2pcSU9Nvyx8rimcOhPkS4tS0=",
+  "hash": "hXY40A6zA2DB9P1OD2R4VvqHbt0zT5YubV69MqWDDIY=",
   "description": "API Lambda@Edge for Next CloudFront distribution",
   "memory": 2048,
   "timeout": 30,
