@@ -2328,6 +2328,11 @@ supports-color@^8.0.0:
   dependencies:
     has-flag "^4.0.0"
 
+swagger-editor-dist@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/swagger-editor-dist/-/swagger-editor-dist-4.0.1.tgz#e73401ef83e9dfea8d8081aa2b050c6def089eab"
+  integrity sha512-sStK0QDVl0C5OfDt+i/jNlLX5lJBPQZUKYHWe0ezvxggJv551PTTI7vSQFDF1ZZz2HPD/0K+z+kyWCwoxh1dzA==
+
 tailwindcss@^2.2.4:
   version "2.2.19"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-2.2.19.tgz#540e464832cd462bb9649c1484b0a38315c2653c"
